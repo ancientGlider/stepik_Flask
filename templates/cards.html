@@ -1,0 +1,16 @@
+<div class="row mt-5">
+  {% for card_ref, card in tours.items() %}
+      <div class="col-4">
+        <div class="card mb-4">
+          <div class="embed-responsive embed-responsive-16by9">
+             <img class="card-img-top embed-responsive-item" src={{ card.picture }} alt="" />
+          </div>
+          <div class="card-body">
+            <h2 class="h5 card-title">{{ card.title }}</h2>
+            <p class="card-text">{{ card.description }}</p>
+            <a href="/tours/{{ card_ref }}" class="btn btn-sm btn-primary">Подробнее</a>
+          </div>
+        </div>
+      </div>
+  {% endfor %}
+</div>
