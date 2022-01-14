@@ -25,7 +25,7 @@ def show_departures(departure):
                                tours={k: v for k, v in data.tours.items() if v["departure"] == departure},
                                departure=departure)
     else:
-        return render_template('oops.html', departures=data.departures)
+        return render_template('oops.html', departures=data.departures), 400
 
 @app.route('/tours/<id>/')
 def show_tours(id):
